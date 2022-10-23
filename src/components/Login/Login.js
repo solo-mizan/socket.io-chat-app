@@ -1,5 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
@@ -7,10 +9,20 @@ const Login = () => {
         console.log(data);
     }
     return (
-        <div className='mx-auto items-center justify-center flex'>
+        <div className='mx-auto items-center justify-center'>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='card w-96 bg-base-100 shadow-md'>
-                    <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                    <figure className='block'>
+                        <LazyLoadImage
+                            src="https://placeimg.com/400/225/arch"
+                            alt="Shoes"
+                            loading='lazy'
+                            height={500}
+                            width={333}
+                            effect="blur"
+                            placeholderSrc='https://placeimg.com/400/225/arch'
+                        />
+                    </figure>
                     <div className='card-body font-mono'>
                         <h3 className='text-2xl text-center'>
                             Login form
