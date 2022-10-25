@@ -9,17 +9,17 @@ const Login = () => {
         console.log(data);
     }
     return (
-        <div className='mx-auto items-center justify-center'>
+        <div className='mx-auto items-center justify-center flex'>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='card w-96 bg-base-100 shadow-md'>
-                    <figure className='block'>
+                    <figure className=''>
                         <LazyLoadImage
                             src="https://placeimg.com/400/225/arch"
                             alt="Shoes"
                             loading='lazy'
-                            height={500}
-                            width={333}
-                            effect="blur"
+                            // height={500}
+                            // width={333}
+                            // effect=""
                             placeholderSrc='https://placeimg.com/400/225/arch'
                         />
                     </figure>
